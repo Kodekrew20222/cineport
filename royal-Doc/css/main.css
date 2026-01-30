@@ -32,9 +32,7 @@ h3 { font-size: 18px;}
 h5 { font-size: 16px;}
 h6 { font-size: 14px;}
 
-strong {
-  letter-s;;Dacing: 1px;
-}
+
 
 code {
   background-color: #ddd;
@@ -65,9 +63,7 @@ section p {
 .clearfix:after {
     clear: both;
 }
-.clearfix {
-    *zoom: 1;
-}
+
 
 .tan {
   margin-bottom: 10px;
@@ -736,6 +732,7 @@ section .movie-card-section .card .card-content .movie-info .d3{
 
 
 .footer_title {
+  text-align: left;
   color: #fff;
   font-weight: 600;
   margin-bottom: 12px;
@@ -748,7 +745,7 @@ section .movie-card-section .card .card-content .movie-info .d3{
   margin: 0;
 
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 26px;
 }
 
@@ -759,5 +756,9 @@ section .movie-card-section .card .card-content .movie-info .d3{
 }
 
 .list_style li a:hover {
+  color: #fff;
+}
+
+.single-footer-widget ul li a{
   color: #fff;
 }
