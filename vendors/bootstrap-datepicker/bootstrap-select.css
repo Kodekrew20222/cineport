@@ -28,8 +28,7 @@ select {
           user-select: none;
   white-space: nowrap;
   width: auto; }
-.nice-select:hover {
-  border-color: #dbdbdb; }
+.nice-select:after{content: none;}
 .nice-select:active, .nice-select.open, .nice-select:focus {
   border-color: #999; }
 .nice-select:after {

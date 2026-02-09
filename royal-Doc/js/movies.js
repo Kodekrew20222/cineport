@@ -103,8 +103,9 @@ function showExtraMovies(movies, container) {
   </div>
 
   <div class="card-content">
-    <p class="movie-name">${movie.title}</p>
-    <p>⭐ ${movie.vote_average}</p>
+    <p class="movie-name mt-2">${movie.title}</p>
+       <p class="release-date "> ${new Date(movie.release_date).toDateString()}</p>
+    <p class="vote">⭐ ${movie.vote_average}</p>
   </div>
 </div>
 
