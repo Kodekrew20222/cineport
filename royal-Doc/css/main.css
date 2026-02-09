@@ -763,3 +763,182 @@ section .movie-card-section .card .card-content .movie-info .d3{
 .single-footer-widget ul li a{
   color: #fff;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .movies-grid {
+
+   /* font-weight:700;
+  margin-top:10px;
+  padding-left:5px;
+  color:#000000; */
+
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+  
+    .movie-card {
+      
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.04);
+    }
+  
+    .movie-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  
+    .movie-card h3 {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+  
+    .movie-card p {
+      margin: 0.25rem 0;
+      font-size: 0.9rem;
+    }
+
+    .movie-card:nth-child(6) img{
+      height: 455px;             
+    }
+    .movie-card img{
+      height: 455px;             
+    }
+
+    .section-heading{
+      padding-left: 15px;
+      margin-top: 20px;
+    }
+
+    
+ 
+ 
+
+
+
+
+
+
+.trailer-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.trailer-content {
+  width: 70%;
+  max-width: 900px;
+  background: #000;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.trailer-content iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 8px;
+}
+
+.close-btn {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background: red;
+  color: rgb(9, 0, 12);
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.trailer-btn {
+  padding: 6px 12px;
+  font-size: 13px;
+  background: red;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+.card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: 0.3s ease;
+
+  
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+
+
+
+
