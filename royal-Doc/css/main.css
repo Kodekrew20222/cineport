@@ -560,6 +560,7 @@ section .movie-card-section .card .card-content .movie-info .d3{
   overflow-x: auto;
   scroll-behavior: smooth;
   padding-bottom: 10px;
+  justify-content: center;
 }
 
 .offer-scroll::-webkit-scrollbar {

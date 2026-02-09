@@ -21,7 +21,54 @@
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="royal-Doc/css/main.css">
 
+  <style>
+    .movies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+  
+    .movie-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
 
+    .movie-card:hover {
+      transform: scale(1.04);
+    }
+  
+    .movie-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  
+    .movie-card h3 {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+  
+    .movie-card p {
+      margin: 0.25rem 0;
+      font-size: 0.9rem;
+    }
+
+    .movie-card:nth-child(6) img{
+      height: 455px;             
+    }
+    .movie-card img{
+      height: 455px;             
+    }
+
+    .section-heading{
+      padding-left: 15px;
+      margin-top: 20px;
+    }
+  </style>
 
 </head>
 
@@ -202,6 +249,16 @@
                 <h2 class="title_color">Your Gateway to Movies & Entertainment</h2>
                 <p>Discover the latest movies, showtimes, and exclusive events near you. Book tickets instantly and enjoy a seamless cinema experience. </p>
             </div>
+
+            <!--https://api.themoviedb.org/3/movie/popular?api_key=YOUR_API_KEY-->
+            
+
+            <h2 class="section-heading">Hollywood Movies</h2>
+            <div id="movies-container" class="movies-grid"></div>
+            
+            <h2 class="section-heading">Bollywood Movies</h2>
+            <div id="bollymovies-container" class="movies-grid"></div>
+
             <!-- <div class="row mb_30">
                 <div class="col-lg-3 col-sm-6">
                     <div class="accomodation_item text-center">
@@ -256,7 +313,7 @@
 
 
 
-            <div class="movie-card-section">
+            <div class="movie-card-section d-none">
 
                 <div class="card">
                     <img
@@ -986,7 +1043,7 @@
 
     <!-- Header -->
     <div class="offers-header">
-      <h5 class="font-weight-bold mb-0 text-white">Offers For You</h5>
+      <h4 class="font-weight-bold mb-0 text-white">Offers For You</h4>
 
       <div class="d-flex align-items-center">
         <button class="scroll-btn mr-2" onclick="scrollOffer(-320)">‹</button>
@@ -1033,7 +1090,7 @@
     </div>
 
     <!-- Card 4 -->
-    <div class="offer-card">
+    <div class="offer-card me-0">
       <img src="./royal-Doc/img/offer4.png" alt="">
       <div class="offer-body">
         <div class="offer-title">Axis Business Supreme Debit Card – Buy 1 Get 1</div>
@@ -1247,128 +1304,112 @@
 
     <!--================ start footer Area  =================-->
     <footer class="footer-area section_gap">
-        <div class="container">
-           
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="single-footer-widget" style="text-align: left;">
+              <a class="navbar-brand d-block mb-2" href="#">
+                <img src="./royal-Doc/img/Logo.png" height="60" alt="Cineport">
+              </a>
+              <p class="footer-address d-none">
+                Ireo Grand View Towers,<br>
+                14th Floor,<br>
+                Golf Course Extension Road,<br>
+                Sector 58, Gurugram
+              </p>
+            </div>
+          </div>
 
-
-
-                
-
-
-<div class="row">
-
-  <div class="col-md-3">
-  <div class="single-footer-widget" style="text-align: left;">
+          <div class="col-md-5">
+            <div class="single-footer-widget">
+              <h6 class="footer_title">Navigation Links</h6>
+              <div class="row">
+                <div class="col-12">
+                  <ul class="list_style">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
     
-    <a class="navbar-brand d-block mb-2" href="#">
-      <img src="./royal-Doc/img/Logo.png" height="60" alt="Cineport">
-    </a>
-
+          <div class="col-md-5">
+            <div class="row justify-content-end">
+              <div class="col-md-4"><img class="img-fluid" src="./royal-Doc/img/footer1.png" alt="Google Play"></div>
+              <div class="col-md-4 pe-0"><img class="img-fluid" src="./royal-Doc/img/footer2.png" alt="App Store"></div>
+            </div>
+          </div>
     
-    <p class="footer-address d-none">
-      Ireo Grand View Towers,<br>
-      14th Floor,<br>
-      Golf Course Extension Road,<br>
-      Sector 58, Gurugram
-    </p>
-
-  </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="single-footer-widget">
-      <h6 class="footer_title">Navigation Links</h6>
-      <div class="row">
-        <div class="col-12">
-          <ul class="list_style">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-5">
-    <div class="row justify-content-end">
-      <div class="col-md-4"><img class="img-fluid" src="./royal-Doc/img/footer1.png" alt="Google Play"></div>
-      <div class="col-md-4 pe-0"><img class="img-fluid" src="./royal-Doc/img/footer2.png" alt="App Store"></div>
-    </div>
-  </div>
-
-</div>
-
-                
-                <!-- <div class="row">  
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6 class="footer_title">Newsletter</h6>
-                        <p>For business professionals caught between high OEM price and mediocre print and graphic
-                            output, </p>
-                        <div id="mc_embed_signup">
-                            <form target="_blank"
-                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                method="get" class="subscribe_form relative">
-                                <div class="input-group d-flex flex-row">
-                                    <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''"
-                                        onblur="this.placeholder = 'Email Address '" required="" type="email">
-                                    <button class="btn sub-btn"><span class="lnr lnr-location"></span></button>
-                                </div>
-                                <div class="mt-10 info"></div>
-                            </form>
+    
+    
+        <!-- <div class="row">  
+                      <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title">Newsletter</h6>
+                            <p>For business professionals caught between high OEM price and mediocre print and graphic
+                                output, </p>
+                            <div id="mc_embed_signup">
+                                <form target="_blank"
+                                    action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                    method="get" class="subscribe_form relative">
+                                    <div class="input-group d-flex flex-row">
+                                        <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                        <button class="btn sub-btn"><span class="lnr lnr-location"></span></button>
+                                    </div>
+                                    <div class="mt-10 info"></div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-footer-widget instafeed">
-                        <h6 class="footer_title">InstaFeed</h6>
-                        <ul class="list_style instafeed d-flex flex-wrap">
-                            <li><img src="image/instagram/Image-01.jpg" alt=""></li>
-                            <li><img src="image/instagram/Image-02.jpg" alt=""></li>
-                            <li><img src="image/instagram/Image-03.jpg" alt=""></li>
-                            <li><img src="image/instagram/Image-04.jpg" alt=""></li>
-                            <li><img src="image/instagram/Image-05.jpg" alt=""></li>
-                            <li><img src="image/instagram/Image-06.jpg" alt=""></li>
-                            <li><img src="image/instagram/Image-07.jpg" alt=""></li>
-                            <li><img src="image/instagram/Image-08.jpg" alt=""></li>
-                        </ul>
-                    </div>
-                </div> 
-            </div> -->
-
-
-
-
-
-
-
-
-
-            <div class="border_line"></div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-footer-widget instafeed">
+                            <h6 class="footer_title">InstaFeed</h6>
+                            <ul class="list_style instafeed d-flex flex-wrap">
+                                <li><img src="image/instagram/Image-01.jpg" alt=""></li>
+                                <li><img src="image/instagram/Image-02.jpg" alt=""></li>
+                                <li><img src="image/instagram/Image-03.jpg" alt=""></li>
+                                <li><img src="image/instagram/Image-04.jpg" alt=""></li>
+                                <li><img src="image/instagram/Image-05.jpg" alt=""></li>
+                                <li><img src="image/instagram/Image-06.jpg" alt=""></li>
+                                <li><img src="image/instagram/Image-07.jpg" alt=""></li>
+                                <li><img src="image/instagram/Image-08.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </div> 
+                </div> -->
+    
+    
+    
+    
+    
+        <div class="border_line"></div>
         <div class="row footer-bottom align-items-center position-relative">
-
- 
-  <div class="col-12 position-absolute start-50 translate-middle-x">
-    <p class="footer-text m-0 text-white">
-      Copyright &copy;
-      <script>document.write(new Date().getFullYear());</script>
-      All rights reserved
-    </p>
-  </div>
-
-
-  <div class="col-12 footer-social text-end">
-    <a href="#"><i class="fa fa-facebook text-white"></i></a>
-    <a href="#"><i class="fa fa-instagram text-white"></i></a>
-  </div>
-
-</div>
-
-
-
+    
+    
+          <div class="col-12 position-absolute start-50 translate-middle-x">
+            <p class="footer-text m-0 text-white">
+              Copyright &copy;
+              <script>document.write(new Date().getFullYear());</script>
+              All rights reserved
+            </p>
+          </div>
+    
+    
+          <div class="col-12 footer-social text-end">
+            <a href="#"><i class="fa fa-facebook text-white"></i></a>
+            <a href="#"><i class="fa fa-instagram text-white"></i></a>
+          </div>
+    
         </div>
+    
+    
+    
+      </div>
     </footer>
     <!--================ End footer Area  =================-->
 
@@ -1387,38 +1428,97 @@
     <script src="js/stellar.js"></script>
     <script src="vendors/lightbox/simpleLightbox.min.js"></script>
     <script src="js/custom.js"></script>
-
-
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
-
     <script>
-        window.addEventListener("scroll", function () {
-            const topNav = document.querySelector("header > nav:first-child");
-            if (window.scrollY > 40) {
-                topNav.style.boxShadow = "0 4px 10px rgba(0,0,0,0.1)";
-            } else {
-                topNav.style.boxShadow = "none";
-            }
-        });
+      window.addEventListener("scroll", function () {
+        const topNav = document.querySelector("header > nav:first-child");
+        if (window.scrollY > 40) {
+          topNav.style.boxShadow = "0 4px 10px rgba(0,0,0,0.1)";
+        } else {
+          topNav.style.boxShadow = "none";
+        }
+      });
     </script>
+    
+    <script>
+      function scrollOffer(value) {
+        document.getElementById("offerScroll").scrollLeft += value;
+      }
+    </script>
+    
+    <script>
+      const API_KEY = "062bcc9b48ab978c0239a6820c2b9ec8";
 
+      const API_URL =
+        `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
 
+      const API_URL2 =
+        `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_original_language=hi&region=IN`;
 
+      async function loadMovies() {
+        const res = await fetch(API_URL);
+        const data = await res.json();
+        displayMovies(data.results);
+      }
 
+      async function loadMovies2() {
+        const res = await fetch(API_URL2);
+        const data = await res.json();
+        displayBollymovies(data.results);
+      }
 
+      function displayMovies(movies) {
+        const container = document.getElementById("movies-container");
+        container.innerHTML = "";
 
+        movies.forEach(movie => {
+          const card = document.createElement("div");
+          card.className = "movie-card";
 
-<script>
-function scrollOffer(value) {
-  document.getElementById("offerScroll").scrollLeft += value;
-}
-</script>
+          const imageUrl = movie.poster_path
+            ? `https://image.tmdb.org/t/p/w300${movie.poster_path}`
+            : "placeholder.jpg";
 
+          card.innerHTML = `
+          <img src="${imageUrl}" alt="${movie.title}">
+          <h3>${movie.title}</h3>
+          <p>${movie.release_date}</p>
+          <p>${movie.vote_average} ⭐</p>
+        `;
 
+          container.appendChild(card);
+        });
+      }
+
+      function displayBollymovies(movies) {
+        const container = document.getElementById("bollymovies-container");
+        container.innerHTML = "";
+
+        movies.forEach(movie => {
+          const card = document.createElement("div");
+          card.className = "movie-card";
+
+          const imageUrl = movie.poster_path
+            ? `https://image.tmdb.org/t/p/w300${movie.poster_path}`
+            : "placeholder.jpg";
+
+          card.innerHTML = `
+          <img src="${imageUrl}" alt="${movie.title}">
+          <h3>${movie.title}</h3>
+          <p>${movie.release_date}</p>
+          <p>${movie.vote_average} ⭐</p>
+        `;
+
+          container.appendChild(card);
+        });
+      }
+
+      loadMovies();
+      loadMovies2();
+    </script>
 
 </body>
 
