@@ -965,3 +965,11 @@ content: none;}
     color: #fcfcfc;
     margin-bottom: 0px;
 }
+
+.premiere-card{
+  text-align: center;
+}
+
+.card-name{
+font-weight: 800;
+}  
